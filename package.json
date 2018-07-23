@@ -1,0 +1,38 @@
+{
+  "name": "codepalm.io",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "autoprefixer": "^7.1.2",
+    "autoprefixer-stylus": "^0.14.0",
+    "concurrently": "3.0.0",
+    "css-loader": "^0.23.1",
+    "firebase": "^5.0.3",
+    "lodash": "^4.17.10",
+    "material-ui": "^0.19.2",
+    "npm-run-all": "latest",
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0",
+    "react-redux": "^5.0.7",
+    "react-redux-firebase": "latest",
+    "react-router": "^4.0.0",
+    "react-router-dom": "^4.0.0-",
+    "react-scripts": "1.1.4",
+    "recompose": "^0.27.0",
+    "redux": "^4.0.0",
+    "redux-firestore": "latest",
+    "redux-form": "latest",
+    "redux-form-material-ui": "latest",
+    "style-loader": "^0.13.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^2.0.0"
+  },
+  "scripts": {
+    "build-css": "stylus -c src/css/ --out src/css/",
+    "watch-css": "npm run build-css && stylus -c -w src/css/ --out src/css",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build-js": "react-scripts build",
+    "build": "npm-run-all build-css build-js"
+  }
+}
